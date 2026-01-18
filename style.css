@@ -34,7 +34,7 @@ body{
     @apply flex flex-col justify-around p-5 h-[180px] w-[140px] bg-transparent border-1 border-[#9d9ea4] rounded-lg space-y-8 shadow-none hover:border-1 hover:border-purple-800 cursor-pointer
 }
 @utility sub-active{
-    @apply border-[#5d54f6] bg-[#F8F9FE]
+    @apply border-[#5d54f6] bg-[#F8F9FE] duration-700 transition-colors  
 }
 @utility btn-next{
     @apply p-3 rounded-lg bg-[#174a8a] text-white cursor-pointer

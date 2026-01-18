@@ -4,5 +4,44 @@ body{
 }
 
 @utility flex-center{
-    @apply flex justify-center
+    @apply flex justify-center items-center min-h-screen
+}
+
+@utility rounded-number{
+    @apply w-8 h-8  border-1 border-white text-white text-center text-xl  rounded-full
+}
+
+@utility steps{
+    @apply flex flex-col ml-7
+}
+@utility step-number{
+    @apply text-xs text-[#9598ff]
+}
+
+@utility active{
+    @apply bg-[#BEE2FD] text-black border-none;
+}
+
+@utility inp-style{
+    @apply w-full border-2 border-[#e8e8eb] rounded-lg  p-2 pl-4
+}
+
+@utility required{
+    @apply border-red-500
+}
+
+@utility sub-btn{
+    @apply flex flex-col justify-around p-5 h-[180px] w-[140px] bg-transparent border-1 border-[#9d9ea4] rounded-lg space-y-8 shadow-none hover:border-1 hover:border-purple-800 cursor-pointer
+}
+@utility sub-active{
+    @apply border-[#5d54f6] bg-[#F8F9FE]
+}
+@utility btn-next{
+    @apply p-3 rounded-lg bg-[#174a8a] text-white cursor-pointer
+}
+@utility back-btn{
+    @apply bg-transparent border-none text-[#9d9ea4] text-lg cursor-pointer hover:text-[#032B57]
+}
+@utility add-one{
+    @apply flex items-center justify-between p-4 border-1 border-[#9d9ea4] rounded-lg cursor-pointer hover:border-[#8c89f9]
 }

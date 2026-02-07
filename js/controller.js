@@ -90,13 +90,13 @@ class Form{
         this.renderView();
         this.reGenerateThirdView();
         this.SetlocalStorage();
-        console.log(AllData);
+
     }
     renderBack(){
         if(this.#StepNumber >= 1) this.#StepNumber--;
         this.renderView();
         this.SetlocalStorage();
-        console.log(AllData);
+
         if(this.#StepNumber === 1) this.reGenerateFirstView();
         if(this.#StepNumber === 2) this.reGeneratesecondView();
 
@@ -113,7 +113,7 @@ class Form{
         const inp_errorPhone = document.querySelector('#inp-errorPhone');
         const keys = ['name','email','phone']
         const data=[];
-        console.log(inpPhone.value.length,Number(inpPhone.value));   
+
 
         //! Check if Name is valid
         if(inpName.value.length < 2 || Number(inpName.value)){
@@ -151,7 +151,7 @@ class Form{
             data.forEach((e,i)=>{
                 return AllData[keys[i]] = e;
             })
-            console.log(AllData);
+
             this.#StepNumber = 2;
             this.renderView()
             this.reGeneratesecondView()
@@ -233,7 +233,7 @@ class Form{
         const yearly = document.querySelector('.yearly')
         let check = e.target.checked;
         const textYearly = document.querySelectorAll('.text-year')
-        // console.log(check ? 'yearly' : 'monthly');
+
         const adjustSub = function(class1,class2){
             monthly.classList.remove(class1)
             monthly.classList.add(class2)
@@ -282,7 +282,7 @@ class Form{
         const typeSub = e.target.closest('#sub-btn').querySelector('#type-sub');
         const price = e.target.closest('#sub-btn').querySelector('#price-sub');
         const priceNum = price.innerText.match(/(\d+)/);
-        console.log(typeSub.innerText,price.innerText);
+
 
         allBtns.forEach(e => e.classList.remove('sub-active'))
         btn.classList.add('sub-active')
@@ -293,7 +293,7 @@ class Form{
         AllData.SubscriptionPriceNum = +priceNum[0];
         AllData.SubclickedBtn = btn;
         this.SetlocalStorage();
-        console.log(AllData);
+
     }
 
     _data=[];
@@ -318,22 +318,22 @@ class Form{
                 this._data = filtered;
             }
         }
-        console.log(this._data);
+
         AllData.AddOnes = {data:this._data,duration:AllData.SubscriptionDuration};
         this.SetlocalStorage();
-        console.log(AllData);
+
     }
 
     adjustForthView(){
         const totalPrice = document.querySelector('#TotalPrice');
         totalPrice.innerHTML = '';
         totalPrice.innerHTML = this.ForthViewHtml();
-        console.log(this.dataSum());
+
     }
     dataSum(){
         if(AllData.AddOnes){
             const addOneNum = AllData.AddOnes.data.map(e => +e.slice(-1)).reduce((prev,el) => prev + el,0)
-            console.log(addOneNum);
+
             AllData.Total = addOneNum + AllData.SubscriptionPriceNum;
             return AllData.Total
         }else return AllData.Total = AllData.SubscriptionPriceNum;
@@ -385,7 +385,7 @@ class Form{
     SubmitionView(){
         return`
             <div class="flex flex-col items-center justify-center space-y-3 w-full h-full max-sm:h-[500px]">
-                <img src="./assets/images/icon-thank-you.svg" alt="">
+                <img src="../assets/images/icon-thank-you.svg" alt="">
                 <h1 class="text-[#032B57] text-3xl font-bold font-sans text-start dark:text-white">Thank you!</h1>
                 <p class="text-[#9d9ea4] text-sm w-[70%] text-center dark:text-[#d3d5de]">MR.${AllData.name} Thanks for confirming your subscription! We hope you have fun using our platform. If you ever need support, please feel free to email us at ahmadalkhooly80@gmail.com</p>
             </div>
@@ -407,10 +407,8 @@ class Form{
             this.renderStepActive()
             if(this.#StepNumber === 1) this.reGenerateFirstView();
             if(this.#StepNumber === 2) this.reGeneratesecondView();
-            console.log(this._data);
-            if(this._data.length > 0) this._data = AllData.AddOnes.data;
-            console.log(this._data);
-            if(+stepNum === 3) this.reGenerateThirdView()
+            if(AllData.AddOnes) this._data = AllData.AddOnes.data;
+            if(this.#StepNumber === 3) this.reGenerateThirdView()
         })
 
     }

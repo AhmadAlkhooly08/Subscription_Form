@@ -23,7 +23,7 @@ body{
 }
 
 @utility inp-style{
-    @apply w-full border-2 border-[#e8e8eb] rounded-lg  p-2 pl-4
+    @apply w-full border-2 border-[#e8e8eb] rounded-lg  p-2 pl-4 dark:text-white dark:bg-[#494646]
 }
 
 @utility required{
@@ -31,17 +31,23 @@ body{
 }
 
 @utility sub-btn{
-    @apply flex flex-col justify-around p-5 h-[180px] w-[140px] bg-transparent border-1 border-[#9d9ea4] rounded-lg space-y-8 shadow-none hover:border-1 hover:border-purple-800 cursor-pointer
+    @apply flex sm:flex-col sm:justify-around sm:p-5 h-[180px] w-[140px] bg-transparent border-1 border-[#9d9ea4] rounded-lg space-y-8 shadow-none hover:border-1 hover:border-purple-800 cursor-pointer max-sm:w-full max-sm:h-20 max-sm:pl-5 max-sm:pt-3
 }
 @utility sub-active{
-    @apply border-[#5d54f6] bg-[#F8F9FE] duration-700 transition-colors  
+    @apply border-[#5d54f6] bg-[#F8F9FE] duration-700 transition-colors dark:bg-[#174a8a]
 }
 @utility btn-next{
     @apply p-3 rounded-lg bg-[#174a8a] text-white cursor-pointer
 }
 @utility back-btn{
-    @apply bg-transparent border-none text-[#9d9ea4] text-lg cursor-pointer hover:text-[#032B57]
+    @apply bg-transparent border-none text-[#9d9ea4] text-lg cursor-pointer hover:text-[#032B57] dark:hover:text-white
 }
 @utility add-one{
     @apply flex items-center justify-between p-4 border-1 border-[#9d9ea4] rounded-lg cursor-pointer hover:border-[#8c89f9]
+}
+@utility unActiveSubType{
+    @apply  text-[#9d9ea4] dark:text-[#636364]
+}
+@utility activeSubType{
+    @apply text-[#032B57] dark:text-white
 }

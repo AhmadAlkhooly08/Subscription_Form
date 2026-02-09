@@ -385,7 +385,7 @@ class Form{
     SubmitionView(){
         return`
             <div class="flex flex-col items-center justify-center space-y-3 w-full h-full max-sm:h-[500px]">
-                <img src="../assets/images/icon-thank-you.svg" alt="">
+                <img src="/assets/images/icon-thank-you.svg" alt="">
                 <h1 class="text-[#032B57] text-3xl font-bold font-sans text-start dark:text-white">Thank you!</h1>
                 <p class="text-[#9d9ea4] text-sm w-[70%] text-center dark:text-[#d3d5de]">MR.${AllData.name} Thanks for confirming your subscription! We hope you have fun using our platform. If you ever need support, please feel free to email us at ahmadalkhooly80@gmail.com</p>
             </div>

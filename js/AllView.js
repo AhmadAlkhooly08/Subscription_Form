@@ -1,4 +1,6 @@
-
+import arcade from '../assets/images/icon-arcade.svg';
+import advanced from '../assets/images/icon-advanced.svg';
+import pro from '../assets/images/icon-pro.svg';
 export const firstView = function(){
     return`
         <div class="flex flex-col items-center space-y-8 w-full mt-10 ">
@@ -52,7 +54,7 @@ export const SecondView = function(){
                 <div>
                     <button id='sub-btn' class="Arcade sub-btn sub-active">
                         <div class="">
-                            <img class="w-13 max-sm:w-10" src="/assets/images/icon-arcade.svg" alt="">
+                            <img class="w-13 max-sm:w-10" src="${arcade}" alt="">
                         </div>
                         <div class="flex flex-col items-start max-sm:pl-4">
                             <h1 id='type-sub' class="text-[#032B57] text-xl font-bold dark:text-white">Arcade</h1>
@@ -65,7 +67,7 @@ export const SecondView = function(){
                 <div>
                     <button id='sub-btn' class="Advanced sub-btn">
                         <div class="">
-                            <img class="w-13 max-sm:w-10" src="/assets/images/icon-advanced.svg" alt="">
+                            <img class="w-13 max-sm:w-10" src="${advanced}" alt="">
                         </div>    
 
                         <div class="flex flex-col items-start max-sm:pl-4">
@@ -79,7 +81,7 @@ export const SecondView = function(){
                 <div class="">
                     <button id='sub-btn' class="Pro sub-btn">
                         <div>
-                            <img class="w-13 max-sm:w-10" src="/assets/images/icon-pro.svg" alt="">
+                            <img class="w-13 max-sm:w-10" src="${pro}" alt="">
                         </div>
 
                         <div class="flex flex-col items-start max-sm:pl-4">

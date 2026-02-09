@@ -52,7 +52,7 @@ export const SecondView = function(){
                 <div>
                     <button id='sub-btn' class="Arcade sub-btn sub-active">
                         <div class="">
-                            <img class="w-13 max-sm:w-10" src="../assets/images/icon-arcade.svg" alt="">
+                            <img class="w-13 max-sm:w-10" src="/assets/images/icon-arcade.svg" alt="">
                         </div>
                         <div class="flex flex-col items-start max-sm:pl-4">
                             <h1 id='type-sub' class="text-[#032B57] text-xl font-bold dark:text-white">Arcade</h1>
@@ -65,7 +65,7 @@ export const SecondView = function(){
                 <div>
                     <button id='sub-btn' class="Advanced sub-btn">
                         <div class="">
-                            <img class="w-13 max-sm:w-10" src="../assets/images/icon-advanced.svg" alt="">
+                            <img class="w-13 max-sm:w-10" src="/assets/images/icon-advanced.svg" alt="">
                         </div>    
 
                         <div class="flex flex-col items-start max-sm:pl-4">
@@ -79,7 +79,7 @@ export const SecondView = function(){
                 <div class="">
                     <button id='sub-btn' class="Pro sub-btn">
                         <div>
-                            <img class="w-13 max-sm:w-10" src="../assets/images/icon-pro.svg" alt="">
+                            <img class="w-13 max-sm:w-10" src="/assets/images/icon-pro.svg" alt="">
                         </div>
 
                         <div class="flex flex-col items-start max-sm:pl-4">
